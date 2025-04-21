@@ -2,6 +2,8 @@
 
 Code du projet de jeu multijoueur en ligne avec socket pour le cours d'OS user.
 
+**Note:** en plus de la branche main, une autre branche, `from-scratch`, est disponible, je vous invite a aller la visiter.
+
 ## File structure
 
 Le code est separe en 2 parties:
