@@ -2,64 +2,64 @@
 
 Code du projet de jeu multijoueur en ligne avec socket pour le cours d'OS user.
 
-**Note:** en plus de la branche main, une autre branche, `from-scratch`, est disponible, je vous invite a aller la visiter.
+**Note :** en plus de la branche main, une autre branche, `from-scratch`, est disponible, je vous invite à aller la visiter.
 
-## File structure
+## Structure des fichiers
 
-Le code est separe en 2 parties:
+Le code est séparé en 2 parties :
 - le code et les ressources du client
 - le code du serveur
 
-## Run
+## Exécution
 
 Pour lancer le projet, il faut lancer le serveur puis 4 clients
 
-### Running the server
+### Lancer le serveur
 
-Pour lancer le server
+Pour lancer le serveur :
 
-Aller dans le dossier du server:
+Aller dans le dossier du serveur :
 ```sh
 cd server
 ```
 
-Puis make pour compiler le code
+Puis faire make pour compiler le code :
 ```sh
 make
 ```
 
-Enfin la commande pour lancer le serveur:
+Enfin, la commande pour lancer le serveur :
 ```sh
 ./dist/sh13-server <port>
 ```
 
-Exemple:
+Exemple :
 ```sh
 ./dist/sh13-server 3000
 ```
 
-### Running the client
+### Lancer le client
 
-Pour lancer un client (il faut en lancer 4 pour jouer une partie)
+Pour lancer un client (il faut en lancer 4 pour jouer une partie) :
 
-Aller dans le dossier du client:
+Aller dans le dossier du client :
 ```sh
 cd client
 ```
 
-Compiler les sources:
+Compiler les sources :
 ```sh
 make
 ```
 
-Excuter un client:
+Exécuter un client :
 ```sh
 ./dist/sh13-client <server-adr> <server-port> <client-adr> <client-port> <player-name>
 ```
 
-Exemple:
+Exemple :
 ```sh
 ./dist/sh13-client localhost 3000 localhost 4000 client1
 ```
 
-**Note**: Pour executer plusieurs client ne pas oublier de changer le `client-port` pour ne pas créer de conflits
+**Note :** Pour exécuter plusieurs clients, ne pas oublier de changer le `client-port` pour ne pas créer de conflits.
