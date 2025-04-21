@@ -5,16 +5,19 @@ CFLAGS  = -std=gnu11 -Wall -Wextra -pedantic
 SOURCES := $(shell find ./src -name "*.c")
 OBJS = ${SOURCES:.c=.o}
 
-OUTPUT = sh13-server
+OUTPUT = program
 OUTPUT_DIR = dist
 
-all: build
+all: build run
 
 build: ${OBJS}
-	@${CC} $(CFLAGS) -o ./${OUTPUT_DIR}/${OUTPUT} ${OBJS} -lSDL2 -lSDL2_image -lSDL2_ttf -lm
+	@${CC} $(CFLAGS) -o ./${OUTPUT_DIR}/${OUTPUT} ${OBJS}
 
 %.o: %.c
 	@${CC} -c $< -o $@
+
+run: ${OUTPUT_DIR}/${OUTPUT}
+	@./${OUTPUT_DIR}/${OUTPUT}
 
 clean:
 	@find . -type f -name '*.o' -exec rm {} +
